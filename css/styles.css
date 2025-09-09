@@ -73,7 +73,7 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #404bbf;
   &::after {
     content: "";
-    width: 100%
+    width: 100%;
     position: absolute;
     left: 0;
     bottom: -1px;

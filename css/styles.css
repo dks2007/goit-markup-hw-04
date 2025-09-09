@@ -65,7 +65,8 @@ p, h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: #404bbf;
-    &::after {
+}
+.nav-link&::after {
     content: "";
     width: 100%;
     position: absolute;
@@ -74,9 +75,7 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 4px;
     background-color:#404bbf;
     border-radius: 2px;
-
   }
-}
 
 .nav-list {
   display: flex;

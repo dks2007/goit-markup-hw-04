@@ -11,7 +11,6 @@
   --color-dairy: #fcfcfc;
 }
 
-/* Загальні стилі */
 body {
   font-family: "Roboto", sans-serif;
   color: var(--color-slate);
@@ -19,7 +18,6 @@ body {
   font-size: 16px;
   letter-spacing: 0.02em;
 }
-
 
 ul {
   list-style: none;
@@ -30,15 +28,44 @@ ul {
 a {
   text-decoration: none;
 }
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
+
 /* ---------- HEADER ---------- */
+
+.page-header {
+    border-bottom: 1px solid var(--color-cornflower);
+    max-width: 100%;
+    box-shadow: 0px 2px 1px
+  rgba(46, 47, 66, 0.08),
+  rgba(46, 47, 66, 0.16),
+  0px 1px 6px rgba(46, 47, 66,0.08);
+   background: #fff;
+}
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.div-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -53,7 +80,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-accent {
-  color: var(--color-navy-blue);
+    color: var(--color-navy-blue);
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
 }
 
 .nav-link {
@@ -66,7 +99,8 @@ p, h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #404bbf;
 }
-.nav-link&::after {
+
+.nav-link::after {
     content: "";
     width: 100%;
     position: absolute;
@@ -77,20 +111,14 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 2px;
   }
 
-.nav-list {
-  display: flex;
-  gap: 40px;
-  padding: 24px 0;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--color-ocean);
-}
-
 .contacts {
   font-style: normal;
   margin-left: auto;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 40px;
 }
 
 .contact-link {
@@ -100,43 +128,6 @@ p, h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-list {
-  display: flex;
-  gap: 40px;
-}
-
-
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--color-ocean);
-}
-.page-header {
-  border-bottom: 1px solid var(--color-cornflower);
-  max-width: 100%;
-  box-shadow: 0px 2px 1px
- rgba(46, 47, 66, 0.08),
- rgba(46, 47, 66, 0.16),
- 0px 1px 6px rgba(46, 47, 66,0.08);
- background: #fff;
-}
-.div-header {
-  display: flex;
-  align-items: center;
-}
-
-.container {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.nav-header {
-  display: flex;
-  align-items: center;
-
-}
-
-/* ---------- HERO ---------- */
 
 .hero {
   background-color: var(--color-navy-blue);
@@ -184,7 +175,31 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-ocean);
 }
 
-/* ---------- FEATURES ---------- */
+.features {
+  padding: 120px 0;
+}
+
+.visually-hidden {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ margin: -1px;
+ border: 0;
+ padding: 0;
+ white-space: nowrap;
+ clip-path: inset(100%);
+ clip: rect(0 0 0 0);
+ overflow: hidden;
+}
+
+.features-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.section-two-li {
+  width: calc((100% - 72px) / 4); 
+}
 
 .features-item-title {
   color: var(--color-navy-blue);
@@ -202,39 +217,10 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-.features {
-  padding: 120px 0;
-}
-.visually-hidden {
- position: absolute;
- width: 1px;
- height: 1px;
- margin: -1px;
- border: 0;
- padding: 0;
- white-space: nowrap;
- clip-path: inset(100%);
- clip: rect(0 0 0 0);
- overflow: hidden;
-}
-
-
-.features-menu {
-  display: flex;
-  gap: 24px;
-} 
-
-.section-two-li {
-  width: calc((100% - 72px) / 4);   /* ------------------- Section 2------------ */
-}
-/* ---------- TEAM ---------- */
-
 .team {
   background-color: var(--color-cloud);
   padding: 120px 0;
 }
-
-
 
 .team-title {
   color: var(--color-navy-blue);
@@ -247,11 +233,20 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 72px;
 }
 
+.team-list {
+  display: flex;
+  gap: 24px;   
+}
+
 .team-li {
   background-color: var(--color-white);
   text-align: center;
   width: calc((100% - 72px) / 4);   /* -------- Section 3 ----------- */
   border-radius: 0 0 4px 4px;
+}
+
+.div-team {
+  padding: 32px 0;   
 }
 
 .team-member-name {
@@ -260,7 +255,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
+  margin-bottom: 8px; 
 }
 
 .team-member-role {
@@ -269,19 +264,12 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-.team-list {
-  display: flex;
-  gap: 24px;
+.our-portfolio {
+  padding: 120px 0;
 }
-
-.div-team {
-  padding: 32px 0;
-}
-
-/* ---------- PORTFOLIO ---------- */
 
 .portfolio-title {
-  color: var(--color-navy-blue);
+      color: var(--color-navy-blue);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -291,44 +279,6 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 72px;
 }
 
-.portfolio-item-title {
-  color: var(--color-navy-blue);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
-
-.portfolio-item-text {
-  color: var(--color-slate);
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* ---------- FOOTER ---------- */
-
-.page-footer {
-  background-color: var(--color-navy-blue);
-  padding: 100px 0;
-}
-
-.logo-footer {
-  color: var(--color-cloud);
-}
-
-.footer-text {
-  color: var(--color-cloud);
-  font-size: 16px;
-  line-height: 1.5;
-  max-width: 264px;
-}
-
-/* --------- Our portfolio ---------- */
-
-.our-portfolio {
-  padding: 120px 0;
-}
 .portfolio-list {
   max-width: 1158px;
   display: flex;
@@ -338,7 +288,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-li {
-  width: calc((100% - 48px) / 3 ); /*----------------- Section 4 --------------- */
+  width: calc((100% - 48px) / 3 );
 }
 
 .div-porfolio {
@@ -347,7 +297,41 @@ p, h1, h2, h3, h4, h5, h6 {
   border-top: none;
 }
 
-  .logo.footer {
-    display: inline-block;
-    margin-bottom: 16px;
-  } 
+.portfolio-item-title {
+    color: var(--color-navy-blue);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.portfolio-item-text {
+    color: var(--color-slate);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page-footer {
+    background-color: var(--color-navy-blue);
+  padding: 100px 0;
+}
+
+.footer {
+}
+
+.logo-footer {
+    color: var(--color-cloud);
+}
+
+.logo.footer {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+    color: var(--color-cloud);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 264px;
+}

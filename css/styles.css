@@ -370,12 +370,6 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 100px 0;
 }
 
-.div-footer {
-  display: flex;
-  align-items: center;
-  margin-right: 120px;
-}
-
 .logo-footer {
     color: var(--color-cloud);
 }
@@ -404,6 +398,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .footer-ul {
   display: flex;
   gap : 16px;
+  
 }
 
 .footer-li {
@@ -421,4 +416,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .footer-link:hover,
 .footer-link:focus {
   background-color: #31d0aa;
+}
+
+.footer-link svg {
+  fill: var(--color-cloud);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  margin-right: 120px;
 }

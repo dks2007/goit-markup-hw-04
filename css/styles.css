@@ -233,8 +233,15 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   gap: 24px;
+}
+
+.icon-width {
   width: 40px;
   height: 40px;
+}
+
+.icon-svg {
+  fill: #f4f4fd;
 }
 
 .icon-link {
@@ -245,6 +252,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link:hover,
 .icon-link:focus {
